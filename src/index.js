@@ -67,7 +67,7 @@ import "./styles.css";
 // }
 // ReactDOM.render(<Clock />, document.getElementById("root"));
 
-Handling Events
+//Handling Events
 class Toggle extends React.Component {
   state = { isToggleOn: true };
   handleClick = () => {
