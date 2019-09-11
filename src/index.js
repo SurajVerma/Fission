@@ -36,33 +36,52 @@ import "./styles.css";
 
 //Stats
 
-class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { date: new Date() };
-  }
+// class Clock extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { date: new Date() };
+//   }
 
-  componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
+//   componentDidMount() {
+//     this.timerID = setInterval(() => this.tick(), 1000);
+//   }
 
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
+//   componentWillUnmount() {
+//     clearInterval(this.timerID);
+//   }
 
-  tick() {
-    this.setState({
-      date: new Date()
-    });
-  }
+//   tick() {
+//     this.setState({
+//       date: new Date()
+//     });
+//   }
 
+//   render() {
+//     return (
+//       <div>
+//         <h1>Hello World!</h1>
+//         <h2>It is {this.state.date.toLocaleTimeString()}</h2>
+//       </div>
+//     );
+//   }
+// }
+// ReactDOM.render(<Clock />, document.getElementById("root"));
+
+Handling Events
+class Toggle extends React.Component {
+  state = { isToggleOn: true };
+  handleClick = () => {
+    this.setState(state => ({
+      isToggleOn: !state.isToggleOn
+    }));
+  };
   render() {
     return (
-      <div>
-        <h1>Hello World!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}</h2>
-      </div>
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? "ON" : "OFF"}
+      </button>
     );
   }
 }
-ReactDOM.render(<Clock />, document.getElementById("root"));
+
+ReactDOM.render(<Toggle />, document.getElementById("root"));
