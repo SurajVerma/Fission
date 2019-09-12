@@ -68,20 +68,28 @@ import "./styles.css";
 // ReactDOM.render(<Clock />, document.getElementById("root"));
 
 //Handling Events
-class Toggle extends React.Component {
-  state = { isToggleOn: true };
-  handleClick = () => {
-    this.setState(state => ({
-      isToggleOn: !state.isToggleOn
-    }));
-  };
-  render() {
-    return (
-      <button onClick={this.handleClick}>
-        {this.state.isToggleOn ? "ON" : "OFF"}
-      </button>
-    );
-  }
-}
+// class Toggle extends React.Component {
+//   state = { isToggleOn: true };
+//   handleClick = () => {
+//     this.setState(state => ({
+//       isToggleOn: !state.isToggleOn
+//     }));
+//   };
+//   render() {
+//     return (
+//       <button onClick={this.handleClick}>
+//         {this.state.isToggleOn ? "ON" : "OFF"}
+//       </button>
+//     );
+//   }
+// }
 
-ReactDOM.render(<Toggle />, document.getElementById("root"));
+// ReactDOM.render(<Toggle />, document.getElementById("root"));
+
+//Conditional Rendering
+function UserGreetings(props) {
+  return <h1>Welcome back!</h1>;
+}
+function GuestGreeting(props) {
+  return <h1>Please Sign up</h1>;
+}
