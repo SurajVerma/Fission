@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "./styles.css";
+import { func } from "prop-types";
 
 // function Welcome(props) {
 //   return <h1>Hello, {props.name}</h1>;
@@ -195,15 +196,32 @@ import "./styles.css";
 
 //List and keys
 
-function NumberList(props) {
-  const numbers = props.numbers;
-  const listItems = numbers.map(number => (
-    <li key={number.toString()}>{number}</li>
-  ));
-  return <ul>{listItems}</ul>;
-}
-const numbers = [1, 2, 3, 4, 5, 6];
-ReactDOM.render(
-  <NumberList numbers={numbers} />,
-  document.getElementById("root")
-);
+// function NumberList(props) {
+//   const numbers = props.numbers;
+//   const listItems = numbers.map(number => (
+//     <li key={number.toString()}>{number}</li>
+//   ));
+//   return <ul>{listItems}</ul>;
+// }
+// const numbers = [1, 2, 3, 4, 5, 6];
+// ReactDOM.render(
+//   <NumberList numbers={numbers} />,
+//   document.getElementById("root")
+// );
+
+// function ListItem(props) {
+//   return <li>{props.value}</li>;
+// }
+// function NumberList(props) {
+//   const numbers = props.numbers;
+//   const listItems = numbers.map(numbers => (
+//     <ListItem key={numbers.toString()} value={numbers} />
+//   ));
+//   return <ul>{listItems}</ul>;
+// }
+
+// const numbers = [1, 2, 3, 4, 5, 6];
+// ReactDOM.render(
+//   <NumberList numbers={numbers} />,
+//   document.getElementById("root")
+// );
