@@ -357,3 +357,14 @@ import "./styles.css";
 // }
 
 // ReactDOM.render(<Calculator />, document.getElementById("root"));
+
+const scaleNames = {
+  c: "Celsius",
+  f: "Fahrenheit"
+};
+class TemperatureInput extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {}
+}
