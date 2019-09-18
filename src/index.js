@@ -378,6 +378,16 @@ function toFahrenheit(celsius) {
   return (celsius * 9) / 5 + 32;
 }
 
+function tryConvert(temperature, convert) {
+  const input = parseFloat(temperature);
+  if (Number.isNaN(input)) {
+    return "";
+  }
+  const output = convert(input);
+  const rounded = Math.round(output * 1000) / 1000;
+  return rounded.toString();
+}
+
 class TemperatureInput extends React.Component {
   constructor(props) {
     super(props);
@@ -388,7 +398,7 @@ class TemperatureInput extends React.Component {
     this.setState({ temperature: e.target.value });
   }
   render() {
-    const temperature = this.state.temperature;
+    const temperature = this.props.temperature;
     const scale = this.props.scale;
     return (
       <fieldset>
