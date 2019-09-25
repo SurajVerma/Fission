@@ -452,52 +452,54 @@ import "./styles.css";
 
 // ReactDOM.render(<Calculator />, document.getElementById("root"));
 
-function FancyBorder(props) {
-  return (
-    <div className={"FancyBorder FancyBorder-" + props.color}>
-      {props.children}
-    </div>
-  );
-}
+//Mars Exploration Program
 
-function Dialog(props) {
-  return (
-    <FancyBorder color="blue">
-      <h1 className="Dialog-title">{props.title}</h1>
-      <p className="Dialog-message">{props.message}</p>
-      {props.children}
-    </FancyBorder>
-  );
-}
+// function FancyBorder(props) {
+//   return (
+//     <div className={"FancyBorder FancyBorder-" + props.color}>
+//       {props.children}
+//     </div>
+//   );
+// }
 
-class SignUpDialog extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { login: "" };
-  }
+// function Dialog(props) {
+//   return (
+//     <FancyBorder color="blue">
+//       <h1 className="Dialog-title">{props.title}</h1>
+//       <p className="Dialog-message">{props.message}</p>
+//       {props.children}
+//     </FancyBorder>
+//   );
+// }
 
-  handleChange(e) {
-    this.setState({ login: e.target.value });
-  }
+// class SignUpDialog extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { login: "" };
+//   }
 
-  handleSignUp() {
-    alert(`Welcome aboard ${this.state.login}`);
-  }
+//   handleChange(e) {
+//     this.setState({ login: e.target.value });
+//   }
 
-  render() {
-    return (
-      <Dialog
-        title="Mars Exploration Program"
-        message="How should we refer to you ?"
-      >
-        <input
-          value={this.state.login}
-          onChange={this.handleChange.bind(this)}
-        />
-        <button onClick={this.handleSignUp.bind(this)}>Sign Me Up!!</button>
-      </Dialog>
-    );
-  }
-}
+//   handleSignUp() {
+//     alert(`Welcome aboard ${this.state.login}`);
+//   }
 
-ReactDOM.render(<SignUpDialog />, document.getElementById("root"));
+//   render() {
+//     return (
+//       <Dialog
+//         title="Mars Exploration Program"
+//         message="How should we refer to you ?"
+//       >
+//         <input
+//           value={this.state.login}
+//           onChange={this.handleChange.bind(this)}
+//         />
+//         <button onClick={this.handleSignUp.bind(this)}>Sign Me Up!!</button>
+//       </Dialog>
+//     );
+//   }
+// }
+
+// ReactDOM.render(<SignUpDialog />, document.getElementById("root"));
